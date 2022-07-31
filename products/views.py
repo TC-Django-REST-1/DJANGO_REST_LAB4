@@ -89,8 +89,9 @@ class Products(APIView):
         skip = get_query(request.query_params.get("skip", ""), None, str.isdigit, int)
         to = get_query(request.query_params.get("to", "10"), 10, str.isdigit, int)
         name = request.query_params.get("name", "")
+        brand = request.query_params.get("brand", "")
         serializer = ProductsSerializer(
-            instance=ProductsModel.objects.filter(name__icontains=name).all()[skip:to],
+            instance=ProductsModel.objects.filter(name__icontains=name, brand__name__icontains=brand).all()[skip:to],
             many=True,
         )
         return Response({"data": serializer.data})
