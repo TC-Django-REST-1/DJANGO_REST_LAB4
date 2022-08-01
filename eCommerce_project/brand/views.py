@@ -11,17 +11,17 @@ from .serializers import brandsSerializer
 
 @api_view(['GET'])
 def get_brands(request: Request):
-    skip = int(request.query_params.get("skip"))
+    skip = int(request.query_params.get("skip",0))
     get = int(request.query_params.get("get", 10))
 
     if "search" in request.query_params:
         brand_title = request.query_params.get("search")
-        brands = brands.objects.filter(title=brand_title)
+        brandss = brands.objects.filter(title=brand_title)
         
     else:
-        brands = brands.objects.all().order_by('-id')[skip:get]
+        brandss = brands.objects.all().order_by('-id')[skip:get]
 
-    data = brandsSerializer(brands, many=True).data
+    data = brandsSerializer(brandss, many=True).data
     return Response({"msg" : "list of all brands", "brands" : data}, status=status.HTTP_200_OK)
 
 

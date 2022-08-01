@@ -16,12 +16,12 @@ def get_products(request: Request):
 
     if "search" in request.query_params:
         product_title = request.query_params.get("search")
-        products = products.objects.filter(title=product_title)
+        productss = products.objects.filter(title=product_title)
         
     else:
-        products = products.objects.all().order_by('-id')[skip:get]
+        productss = products.objects.all().order_by('-id')[skip:get]
 
-    data = productsSerializer(products, many=True).data
+    data = productsSerializer(productss, many=True).data
     return Response({"msg" : "list of all products", "products" : data}, status=status.HTTP_200_OK)
 
 

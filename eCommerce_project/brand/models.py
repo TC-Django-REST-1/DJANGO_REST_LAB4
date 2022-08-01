@@ -4,5 +4,5 @@ from django.db import models
 class brands(models.Model):
     title = models.CharField(max_length=512)
     description = models.TextField()
-    established_at = models.DateTimeField()
+    established_at = models.DateField()
     city = models.CharField(max_length=512)
