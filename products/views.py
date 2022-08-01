@@ -91,7 +91,9 @@ class Products(APIView):
         name = request.query_params.get("name", "")
         brand = request.query_params.get("brand", "")
         serializer = ProductsSerializer(
-            instance=ProductsModel.objects.filter(name__icontains=name, brand__name__icontains=brand).all()[skip:to],
+            instance=ProductsModel.objects.filter(
+                name__icontains=name, brand__name__icontains=brand
+            ).all()[skip:to],
             many=True,
         )
         return Response({"data": serializer.data})
