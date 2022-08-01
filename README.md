@@ -23,8 +23,8 @@
 
 #### Requirements:
 
-- Use Appropriate field types .
-- Create CRUD API endpoints for each model.
-- Create an endpoint to display the products of a specific brand . 
-- Add skip & get when listing the list of brands or products (limiting the number of brands/products displayed)
-- Add search API endpoint for a specific brand by name. 
+- Use Appropriate field types . Done
+- Create CRUD API endpoints for each model. Done
+- Create an endpoint to display the products of a specific brand . DONE 
+- Add skip & get when listing the list of brands or products (limiting the number of brands/products displayed) DONE
+- Add search API endpoint for a specific brand by name.  DONE
