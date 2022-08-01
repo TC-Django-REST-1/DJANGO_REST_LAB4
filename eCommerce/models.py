@@ -1,3 +1,4 @@
+from enum import unique
 from django.db import models
 
 # Create your models here.
@@ -11,10 +12,13 @@ class Brand(models.Model):
 
 
 class Product(models.Model):
-    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    brand = models.ForeignKey(
+        Brand, on_delete=models.CASCADE, related_name='name')
     name = models.CharField(max_length=128)
     description = models.TextField()
     image_url = models.URLField(blank=True)
     price = models.FloatField()
     quantity = models.IntegerField()
     is_active = models.BooleanField()
+    class Meta:
+        unique_together = (('brand','name'),)
