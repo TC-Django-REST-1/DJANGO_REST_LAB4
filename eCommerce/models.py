@@ -17,8 +17,9 @@ class Product(models.Model):
     name = models.CharField(max_length=128)
     description = models.TextField()
     image_url = models.URLField(blank=True)
-    price = models.FloatField()
-    quantity = models.IntegerField()
+    price = models.DecimalField(decimal_places=2, max_digits=3)
+    quantity = models.PositiveIntegerField()
     is_active = models.BooleanField()
+
     class Meta:
-        unique_together = (('brand','name'),)
+        unique_together = (('brand', 'name'),)

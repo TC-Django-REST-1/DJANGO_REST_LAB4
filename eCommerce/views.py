@@ -103,17 +103,17 @@ def list_Products(request: Request):
 
     skip = int(request.query_params.get("skip", 0))
     get = int(request.query_params.get("get", 10))
-
+    all_Product = Product.objects.order_by(Lower("name"))
     if "search" in request.query_params:
         search_phrase = request.query_params["search"]
-        all_Product = Product.objects.filter(Q(brand=search_phrase))
-        remove_id = all_Product.values()[0]
+        all_Product = Product.objects.all().filter(brand_id=search_phrase)
+        remove_id = all_Product.values()
         res_data = {
             "msg": f"A list of All Products of the brand {search_phrase} ",
             "brands": remove_id
         }
     else:
-        all_Product = Product.objects.order_by(Lower("name"))
+       
 
         # serializer = all_Product.exclude('brand_id').values()
         remove_id = all_Product.values()
