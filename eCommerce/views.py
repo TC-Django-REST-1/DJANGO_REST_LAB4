@@ -86,12 +86,12 @@ def add_Product(request: Request):
     else:
         print(request.data["brand"])
         return Response({
-            "msg": new_Product.errors, "details": (new_Product.data.values())
+            "msg": new_Product.errors, "details": (new_Product.data)
         }, status=status.HTTP_406_NOT_ACCEPTABLE)
     print(new_Product.data.get('name'))
     # {{ {new_Product.data.get('name')} }} {request.data.get['brand']}
     return Response({
-        "msg": f"create a new brand with brand  with name Successfully"
+        "msg": f"create a new product in brand {{ {request.data['brand']} }} with name {{ {request.data['name']} }}  Successfully"
     }, status=status.HTTP_200_OK)
 
 
