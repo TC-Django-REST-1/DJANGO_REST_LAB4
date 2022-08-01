@@ -1,0 +1,70 @@
+{
+        "id": 10,
+        "title": "HOUSE OF VERSACE",
+        "description": "is an Italian luxury fashion company and trade name founded by Gianni Versace in 1978.",
+        "established_at": 1978,
+        "city": "Milan, Italy"
+    },
+    {
+        "id": 9,
+        "title": "ARMANI",
+        "description": "Armani, is an Italian luxury fashion house founded by Giorgio Armani which designs, manufactures, distributes and retails haute couture, ready-to-wear, leather goods, shoes, watches, jewelry, accessories, eyewear, cosmetics and home interiors",
+        "established_at": 1975,
+        "city": "Milan, Italy"
+    },
+    {
+        "id": 8,
+        "title": "FENDI",
+        "description": "FENDI is an Italian luxury fashion house producing fur, ready-to-wear, leather goods, shoes, fragrances, eyewear, timepieces and accessories.",
+        "established_at": 1925,
+        "city": "Rome, Italy"
+    },
+    {
+        "id": 7,
+        "title": "BURBERRY",
+        "description": "Burberry is a British luxury fashion house headquartered in London, England. It currently designs and distributes ready to wear, including trench coats (for which it is most famous), leather goods, footwear, fashion accessories, eyewear, fragrances, and cosmetics.",
+        "established_at": 1856,
+        "city": "London, England"
+    },
+    {
+        "id": 6,
+        "title": "RALPH LAUREN",
+        "description": "Ralph Lauren Corporation is an American publicly traded fashion company that was founded in 1967 by American fashion designer Ralph Lauren.",
+        "established_at": 1967,
+        "city": "New York, U.S."
+    },
+    {
+        "id": 5,
+        "title": "CHANEL",
+        "description": "CHANEL s a French luxury fashion house that was founded by couturière Coco Chanel in 1910. It focuses on women's ready-to-wear clothes, luxury goods and accessories.",
+        "established_at": 1910,
+        "city": "London, England"
+    },
+    {
+        "id": 4,
+        "title": "PRADA",
+        "description": "PRADA is an Italian luxury fashion house that was founded in 1913 by Mario Prada.",
+        "established_at": 1913,
+        "city": "Milan, Italy"
+    },
+    {
+        "id": 3,
+        "title": "HERMES",
+        "description": "HERMES  is a French luxury design house established in 1837. It specializes in leather goods, lifestyle accessories, home furnishings, perfumery, jewelry, watches and ready-to-wear.",
+        "established_at": 1837,
+        "city": "Paris, France"
+    },
+    {
+        "id": 2,
+        "title": "GUCCI",
+        "description": "GUCCI is an Italian high-end luxury fashion house based in Florence, Italy.[1][2][3] Its product lines include handbags, ready-to-wear, footwear, and accessories, makeup, fragrances, and home decoration.",
+        "established_at": 1921,
+        "city": "Florence, Italy"
+    },
+    {
+        "id": 1,
+        "title": "LOUIS VUITTON",
+        "description": "commonly known as Louis Vuitton, is a French luxury fashion house and company founded in 1854 by Louis Vuitton.[1] The label's LV monogram appears on most of its products, ranging from luxury bags and leather goods to ready-to-wear, shoes, watches, jewelry, accessories, sunglasses and books.",
+        "established_at": 1854,
+        "city": "Paris, France"
+    }
