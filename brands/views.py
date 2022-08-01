@@ -98,7 +98,11 @@ def list_products(request : Request):
     skip = int(request.query_params.get("skip", 0))
     get = int(request.query_params.get("get", 3))
     
-    products = Product.objects.all()[skip:get]
+    if "brand_id" in request.query_params:
+        products = Product.objects.filter(brand=request.query_params["brand_id"])
+    else:
+    
+        products = Product.objects.all()[skip:get]
         
     products_data = ProductSerializer(instance=products, many=True).data
 
