@@ -1,15 +1,12 @@
-from operator import is_
-from turtle import title
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.request import Request
 from django.db.models.functions import Lower
 from rest_framework import status
-from django.db.models import Q
+
 
 from .models import Brand, Product
 from .serializers import ProductSerializer, BrandSerializer
-from eCommerce import serializers
 
 
 @api_view(["POST"])
@@ -113,11 +110,10 @@ def list_Products(request: Request):
             "brands": remove_id
         }
     else:
-       
 
         # serializer = all_Product.exclude('brand_id').values()
         remove_id = all_Product.values()
-        
+
         res_data = {
             "msg": "A list of All Product",
             "Product": remove_id
