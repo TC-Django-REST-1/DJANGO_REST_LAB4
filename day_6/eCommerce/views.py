@@ -111,8 +111,7 @@ def remove_product(request: Request, product_id):
 @api_view(['GET'])
 def brand_products_list(request: Request, brand_title):
     try:
-        brand = Brand.objects.get(title = brand_title) # get the whole info of brand by its title so we can extract the id of that brand
-        products = Product.objects.filter(brand__exact=brand.id) # filter all products by the brand.id because the Product model has only the id of the brand not the name
+        products = Product.objects.filter(brand__title=brand_title) # filter all products using the brand model with any of its' field
         data = ProductSerilizer(products, many=True).data
         return Response(data, status=status.HTTP_200_OK)
     except Exception as e:
